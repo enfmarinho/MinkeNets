@@ -429,3 +429,18 @@
 |            |                                       |                              | Games : N: 14206 W: 3348 L: 3195 D: 7663     |                                                |
 |            |                                       |                              | Penta : [24, 1567, 3760, 1736, 16]           |                                                |
 |            |                                       |                              | https://eduardomarinho.dev/test/802/         |                                                |
+|------------+---------------------------------------+------------------------------+----------------------------------------------+------------------------------------------------|
+| minke37    | (768x10hm->1280pw)x2->(16x2->32->1)x8 | source: 12-33                | Elo   : -3.72 +- 4.88 (95%)                  | use linear decay LR for finetune stage and     |
+|            | activ: crelu+csrelu->screlu->crelu    | dataset: 17b                 | SPRT  : N=25000 Threads=1 Hash=8MB           | increase finetune WDL to 1.0                   |
+|            | quant: [255, 128, 64]                 | random fen skipping: 0.5     | LLR   : -2.96 (-2.94, 2.94) [0.00, 5.00]     |                                                |
+|            | buckets:                              | scheduler 1:                 | Games : N: 8978 W: 2674 L: 2770 D: 3534      | Note: linear decay LR was tested in isolation  |
+|            | 0, 1, 2, 3,                           | - sb: 600                    | Penta : [256, 1107, 1844, 1041, 241]         | and seemed to be neutral                       |
+|            | 4, 5, 6, 7,                           | - lr: linear (1e-3, 1e-6)    | (not done with OpenBench)                    |                                                |
+|            | 8, 8, 8, 8,                           | - wdl:                       |                                              |                                                |
+|            | 9, 9, 9, 9,                           | -- 100sb constant(0.2)       | Elo   : 3.63 +- 2.79 (95%)                   |                                                |
+|            | 9, 9, 9, 9,                           | -- 500sb linear(0.2, 0.4)    | SPRT  : 40.0+0.40s Threads=1 Hash=128MB      |                                                |
+|            | 9, 9, 9, 9,                           | scheduler 2:                 | LLR   : 2.90 (-2.25, 2.89) [0.00, 5.00]      |                                                |
+|            | 9, 9, 9, 9,                           | - sb: 200                    | Games : N: 14168 W: 3301 L: 3153 D: 7714     |                                                |
+|            | 9, 9, 9, 9,                           | - lr: linear(1e-5, 1e-7)     | Penta : [15, 1557, 3788, 1713, 11]           |                                                |
+|            |                                       | - wdl: k(1.0)                | https://eduardomarinho.dev/test/807/         |                                                |
+|------------+---------------------------------------+------------------------------+----------------------------------------------+------------------------------------------------|
