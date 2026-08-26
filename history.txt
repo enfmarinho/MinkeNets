@@ -465,7 +465,7 @@
 |            |                                       |                              | Penta : [3, 383, 950, 495, 4]                |                                                |
 |            |                                       |                              | https://eduardomarinho.dev/test/861/         |                                                |
 |------------+---------------------------------------+------------------------------+----------------------------------------------+------------------------------------------------|
-| minke39    | (768x10hm->1280pw)x2->(16x2->32->1)x8 | source: 12-33                | Elo   : 8.58 +- 5.61 (95%)                   | more king buckets, from 10 to 16               |
+| minke39    | (768x16hm->1280pw)x2->(16x2->32->1)x8 | source: 12-33                | Elo   : 8.58 +- 5.61 (95%)                   | more king buckets, from 10 to 16               |
 |            | activ: crelu+csrelu->screlu->crelu    | dataset: 17b                 | SPRT  : N=25000 Threads=1 Hash=8MB           |                                                |
 |            | quant: [255, 128, 64]                 | random fen skipping: 0.5     | LLR   : 2.95 (-2.94, 2.94) [0.00, 5.00]      |                                                |
 |            | buckets:                              | scheduler 1:                 | Games : 7368 W: 2422 L: 2240 D: 2706         |                                                |
