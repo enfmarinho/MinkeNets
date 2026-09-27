@@ -483,7 +483,7 @@
 |            | activ: crelu+csrelu->screlu->crelu    | dataset: 18.6b               | SPRT  : N=25000 Threads=1 Hash=8MB           |                                                |
 |            | quant: [255, 128, 64]                 | random fen skipping: 0.5     | LLR   : 2.95 (-2.94, 2.94) [0.00, 5.00]      |                                                |
 |            | buckets:                              | scheduler 1:                 | Games : N: 11348 W: 3703 L: 3498 D: 4147     |                                                |
-|            | 0,  1,  2,  3,                        | - sb: 600                    | Penta : [375, 1238, 2308, 1313, 440]         |                                                |
+|            | 0,  1,  2,  3,                        | - sb: 800                    | Penta : [375, 1238, 2308, 1313, 440]         |                                                |
 |            | 4,  5,  6,  7,                        | - lr: linear (1e-3, 1e-6)    | (not done with OpenBench)                    |                                                |
 |            | 8,  8,  9,  9,                        | - wdl:                       |                                              |                                                |
 |            | 10, 10, 11, 11,                       | -- 100sb constant(0.2)       | Elo   : 4.35 +- 3.19 (95%)                   |                                                |
@@ -497,7 +497,7 @@
 |            | activ: crelu+csrelu->screlu->crelu    | dataset: 20.8b               | SPRT  : 8.0+0.08s Threads=1 Hash=32MB        |                                                |
 |            | quant: [255, 128, 64]                 | random fen skipping: 0.5     | LLR   : 2.94 (-2.25, 2.89) [0.00, 5.00]      |                                                |
 |            | buckets:                              | scheduler 1:                 | Games : N: 5886 W: 1540 L: 1405 D: 2941      |                                                |
-|            | 0,  1,  2,  3,                        | - sb: 600                    | Penta : [36, 656, 1439, 761, 51]             |                                                |
+|            | 0,  1,  2,  3,                        | - sb: 800                    | Penta : [36, 656, 1439, 761, 51]             |                                                |
 |            | 4,  5,  6,  7,                        | - lr: linear (1e-3, 1e-6)    | https://eduardomarinho.dev/test/940/         |                                                |
 |            | 8,  8,  9,  9,                        | - wdl:                       |                                              |                                                |
 |            | 10, 10, 11, 11,                       | -- 100sb constant(0.2)       |                                              |                                                |
@@ -510,7 +510,7 @@
 | minke42    | (768x16hm->1280pw)x2->(16x2->32->1)x8 | random fen skipping: 0.5     | Elo   : 3.81 +- 2.90 (95%)                   | remove older data from finetune dataset        |
 |            | activ: crelu+csrelu->screlu->crelu    | stage 1:                     | SPRT  : 40.0+0.40s Threads=1 Hash=128MB      |                                                |
 |            | quant: [255, 128, 64]                 | - data: 12-40 (20.8b)        | LLR   : 2.90 (-2.25, 2.89) [0.00, 5.00]      |                                                |
-|            | buckets:                              | - sb: 600                    | Games : N: 13218 W: 3202 L: 3057 D: 6959     |                                                |
+|            | buckets:                              | - sb: 800                    | Games : N: 13218 W: 3202 L: 3057 D: 6959     |                                                |
 |            | 0,  1,  2,  3,                        | - lr: linear (1e-3, 1e-6)    | Penta : [10, 1466, 3513, 1609, 11]           |                                                |
 |            | 4,  5,  6,  7,                        | - wdl:                       | https://eduardomarinho.dev/test/969/         |                                                |
 |            | 8,  8,  9,  9,                        | -- 100sb constant(0.2)       |                                              |                                                |
